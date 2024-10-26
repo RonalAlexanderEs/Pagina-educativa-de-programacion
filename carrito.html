@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/carrito.css">
+    <script src="/js/carrito.js" async></script>
+    <title></title>
+</head>
+<body>
+
+
+
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Curso de Introducción a Inteligencia Artificial</span>
+                <img src="/img//curso-ia-logo (1).svg" alt="" class="img-item">
+                <span class="precio-item">S/ 50.00</span> <!-- Precio en soles -->
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Curso de Inteligencia Artificial</span>
+                <img src="/img/GPT-CURSO-CARRITO.svg" alt="" class="img-item">
+                <span class="precio-item">S/ 26.00</span> <!-- Precio en soles -->
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Curso de ChatGPTS</span>
+                <img src="/img/GPT-CURSO-CARRITO.svg" alt="" class="img-item">
+                <span class="precio-item">S/ 76.00</span> <!-- Precio en soles -->
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+           
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+                <!-- Aquí se llenarán los items del carrito -->
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        S/ 0.00 <!-- Total inicial en soles -->
+                    </span>
+                </div>
+                <div class="metodos-pago">
+                    <h2><i class="fas fa-credit-card"></i> Selecciona el Método de Pago</h2>
+    
+                    <label for="tarjeta">
+                        <input type="radio" name="pago" id="tarjeta" onclick="mostrarFormularioTarjeta()"> Tarjeta de Crédito/Débito
+                    </label><br>
+    
+                    <label for="yape">
+                        <input type="radio" name="pago" id="yape" onclick="mostrarCampoCelular()"> Yape
+                    </label><br>
+    
+                    <label for="plin">
+                        <input type="radio" name="pago" id="plin" onclick="mostrarCampoCelular()"> Plin
+                    </label><br>
+                    <!-- Formulario de Pago con Tarjeta de Crédito -->
+            <div id="formulario-tarjeta" class="formulario-tarjeta oculto">
+                <h2><i class="fas fa-credit-card"></i> Detalles de la Tarjeta</h2>
+                <label for="nombre-titular">Nombre del Titular</label>
+                <input type="text" id="nombre-titular" placeholder="Nombre como aparece en la tarjeta">
+
+                <label for="numero-tarjeta">Número de Tarjeta</label>
+                <input type="text" id="numero-tarjeta" placeholder="1234 5678 9012 3456" maxlength="19">
+
+                <div class="grupo-campos">
+                    <div class="campo">
+                        <label for="fecha-expiracion">Fecha de Expiración</label>
+                        <input type="text" id="fecha-expiracion" placeholder="MM/AA" maxlength="5">
+                    </div>
+                    <div class="campo">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="123" maxlength="3">
+                    </div>
+                </div>
+            </div>
+            <div id="campo-celular" class="oculto">
+                <h2><i class="fas fa-mobile-alt"></i> Ingrese su número de celular</h2>
+                <input type="text" id="numero-celular" placeholder="Número de celular" maxlength="9">
+            </div>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+            </div>
+
+            <!-- Opciones de Pago -->
+            <!-- Campo para el número de celular -->
+            <div id="campo-celular" class="oculto">
+                <h2><i class="fas fa-mobile-alt"></i> Ingrese su número de celular</h2>
+                <input type="text" id="numero-celular" placeholder="Número de celular" maxlength="9">
+            </div>
+
+            <!-- Formulario de Pago con Tarjeta de Crédito -->
+            <div id="formulario-tarjeta" class="formulario-tarjeta oculto">
+                <h2><i class="fas fa-credit-card"></i> Detalles de la Tarjeta</h2>
+                <label for="nombre-titular">Nombre del Titular</label>
+                <input type="text" id="nombre-titular" placeholder="Nombre como aparece en la tarjeta">
+
+                <label for="numero-tarjeta">Número de Tarjeta</label>
+                <input type="text" id="numero-tarjeta" placeholder="1234 5678 9012 3456" maxlength="19">
+
+                <div class="grupo-campos">
+                    <div class="campo">
+                        <label for="fecha-expiracion">Fecha de Expiración</label>
+                        <input type="text" id="fecha-expiracion" placeholder="MM/AA" maxlength="5">
+                    </div>
+                    <div class="campo">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="123" maxlength="3">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campo para el número de celular -->
+            <div id="campo-celular" class="oculto">
+                <h2><i class="fas fa-mobile-alt"></i> Ingrese su número de celular</h2>
+                <input type="text" id="numero-celular" placeholder="Número de celular" maxlength="9">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

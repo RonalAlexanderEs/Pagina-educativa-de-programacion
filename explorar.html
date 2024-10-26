@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>explorar</title>
+    <link rel="stylesheet" href="/css/explorar.css">
+</head>
+<body>
+
+
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
+        </div>
+
+        <a href="sesion.html"  class="btn"><button  class="acceder-btn">Acceder</button></a>
+        <!--MENU ADAPTATIVO-->
+
+    </header>
+
+
+<div class="contenedor">
+<div class="contenedor-filtro">
+
+    <div class="contenedor-letras">
+    <h1 class="titu-explo">Cursos online para trabajar en tecnología</h1>
+    <p class="sub-explo">Elige entre más de 1000 cursos online para aprender desde cero o desarrollar las habilidades más demandadas del trabajo en tecnología.</p>
+</div>
+
+    <div class="filter-container">
+        <select id="category-filter">
+            <option value="all">Todas las categorías</option>
+            <option value="desarrollo">Desarrollo e Ingeniería</option>
+            <option value="ingles">Inglés</option>
+            <option value="marketing">Marketing</option>
+            <option value="liderazgo">Liderazgo</option>
+            <option value="negocios">Negocios y Emprendimiento</option>
+        </select>
+    </div>
+</div>
+
+
+
+    <div id="all-courses">
+        <h2>Todos los cursos</h2>
+        <div id="courses-container" class="courses-grid"></div>
+    </div>
+
+    <div id="desarrollo" class="category-section">
+        <h2>Desarrollo e Ingeniería</h2>
+        <div id="desarrollo-container" class="courses-grid"></div>
+    </div>
+
+    <div id="ingles" class="category-section">
+        <h2>Inglés</h2>
+        <div id="ingles-container" class="courses-grid"></div>
+    </div>
+
+    <div id="marketing" class="category-section">
+        <h2>Marketing</h2>
+        <div id="marketing-container" class="courses-grid"></div>
+    </div>
+
+    <div id="liderazgo" class="category-section">
+        <h2>Liderazgo</h2>
+        <div id="liderazgo-container" class="courses-grid"></div>
+    </div>
+
+    <div id="negocios" class="category-section">
+        <h2>Negocios y Emprendimiento</h2>
+        <div id="negocios-container" class="courses-grid"></div>
+    </div>
+</div>
+
+    <script src="/js/explorar.js"></script>
+</body>
+</html>

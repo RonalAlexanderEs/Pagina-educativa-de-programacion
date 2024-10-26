@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carrera</title>
+    <link rel="stylesheet" href="/css/carrera.css">
+</head>
+
+<body>
+
+
+    <!--ENCABEZADO-->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="explorar.html">Cursos</a></li>
+
+                <li><a href="planes.html">Planes</a></li>
+            
+                <li><a href="beca.html">Beca</a></li>
+                <li> <div class="dropdown">
+                    <span class="edad">Edad</span>
+                    <div class="dropdown-content">
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',], ['#ff3d3d', '#b92b2b', 'rgba(190, 50, 50, 0.856)', '#d03434'])">5-10
+                            años</a>
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',],['#00e5ff', '#025266', ' rgba(15, 121, 170, 0.856)', '#03c2db'])">10-18 años
+                            </a>
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',], ['#00ff7f', '#026634', 'rgba(15, 170, 80, 0.856)', '#03db6f'])">19+ años
+                            </a>
+                    </div>
+                </div></li>
+
+            </ul>
+        </nav>
+       
+
+
+
+        <a href="sesion.html" class="btn"><button class="acceder-btn">Acceder</button></a>
+        <!--MENU ADAPTATIVO-->
+        <a onclick="openNav()" href="#" class="menu"><button class="acceder-btn">Menu</button></a>
+        <div class="overlay" id="mobile-menu">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="explorar.html">Cursos</a>
+                <a href="planes.html">Planes</a>
+              
+                <a href="beca.html">Beca</a>
+                <div class="dropdown">
+                    <span class="edad">Edad</span>
+                    <div class="dropdown-content">
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',], ['#ff3d3d', '#b92b2b', 'rgba(190, 50, 50, 0.856)', '#d03434'])">5-10
+                            años</a>
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',],['#00e5ff', '#025266', ' rgba(15, 121, 170, 0.856)', '#03c2db'])">10-18 años
+                            </a>
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',], ['#00ff7f', '#026634', 'rgba(15, 170, 80, 0.856)', '#03db6f'])">19+ años
+                            </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </header>
+
+    <!--CARRERA-->
+
+    <div class="container">
+        <div class="titulo">
+            <p class="info-ruta">Ruta</p>
+            <h1>Data Science e Inteligencia Artificial</h1>
+            <p class="titulo-info">Potencia tu carrera con nuestros cursos online de ciencia de datos. Domina la
+                analítica de datos para resolver desafíos y certifícate como Data Scientist.</p>
+            <a href="/planes.html"><button class="start-button">Empieza ahora</button></a>
+        </div>
+
+        <div class="nav-tabs">
+            <div class="nav-tab active" data-tab="intro">Introducción a Inteligencia Artificial y Ciencia de Datos</div>
+            <div class="nav-tab" data-tab="generativa">Inteligencia Artificial Generativa</div>
+            <div class="nav-tab" data-tab="business">Business Intelligence y Data Analytics</div>
+            <div class="nav-tab" data-tab="ingenieria">Ingeniería de Datos</div>
+            <div class="nav-tab" data-tab="machine">Machine Learning</div>
+        </div>
+
+        <div class="content">
+            <div id="intro" class="section">
+                <div class="titulo-info">
+                    <h2>Introducción a Inteligencia Artificial y Ciencia de Datos </h2>
+
+                    <span>Descubre el panorama general de la inteligencia artificial y ciencia de datos, sus diferencias
+                        y cómo se relacionan. Conoce herramientas de IA que puedes usar fácilmente. Además descubre cómo
+                        podrías iniciar en el campo de la ciencia de datos.</span>
+
+                </div>
+                <div class="course">
+                    <h3 class="titulo-ruta">Introducción a AI</h3>
+                    <p class="contenido-ruta">Usa inteligencia artificial sin ser experto en tecnología. Logra
+                        resultados impactantes
+                        rápidamente, mejorando a nivel personal y profesional.</p>
+                    <div class="course-info">
+                        <span>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div> 3 cursos
+                        </span>
+                        <span>7 horas</span>
+                    </div>
+                    <a href="curso.html"><button class="course-button">Conocer ruta</button></a>
+                </div>
+
+                <div class="course">
+                    <h3 class="titulo-ruta">Bases para Analítica y Ciencia de Datos</h3>
+                    <p class="contenido-ruta">Descubre roles y herramientas de análisis y ciencia de datos desde cero.
+                        Aprende matemáticas
+                        esenciales, Excel, estadística y probabilidad.</p>
+                    <div class="course-info">
+                        <span>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div> 5 cursos
+                        </span>
+                        <span>10 horas</span>
+                    </div>
+                    <button class="course-button">Conocer ruta</button>
+                </div>
+            </div>
+
+
+            <!--SEGUNDO TEMA-->
+            <div id="generativa" class="section">
+                <div class="titulo-info">
+                    <h2>Inteligencia Artificial Generativa</h2>
+
+                    <span>Descubre el panorama general de la inteligencia artificial y ciencia de datos, sus diferencias
+                        y cómo se relacionan. Conoce herramientas de IA que puedes usar fácilmente. Además descubre cómo
+                        podrías iniciar en el campo de la ciencia de datos.</span>
+
+                </div>
+                <div class="course">
+                    <h3 class="titulo-ruta">Introducción a AI</h3>
+                    <p class="contenido-ruta">Usa inteligencia artificial sin ser experto en tecnología. Logra
+                        resultados impactantes
+                        rápidamente, mejorando a nivel personal y profesional.</p>
+                    <div class="course-info">
+                        <span>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div> 3 cursos
+                        </span>
+                        <span>7 horas</span>
+                    </div>
+                    <button class="course-button">Conocer ruta</button>
+                </div>
+
+                <div class="course">
+                    <h3 class="titulo-ruta">Bases para Analítica y Ciencia de Datos</h3>
+                    <p class="contenido-ruta">Descubre roles y herramientas de análisis y ciencia de datos desde cero.
+                        Aprende matemáticas
+                        esenciales, Excel, estadística y probabilidad.</p>
+                    <div class="course-info">
+                        <span>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div> 5 cursos
+                        </span>
+                        <span>10 horas</span>
+                    </div>
+                    <button class="course-button">Conocer ruta</button>
+                </div>
+            </div>
+
+            <!--TERCER TEMA-->
+            <div id="business" class="section">
+                <div class="titulo-info">
+                    <h2>Business Intelligence y Data Analytics</h2>
+
+                    <span>Descubre el panorama general de la inteligencia artificial y ciencia de datos, sus diferencias
+                        y cómo se relacionan. Conoce herramientas de IA que puedes usar fácilmente. Además descubre cómo
+                        podrías iniciar en el campo de la ciencia de datos.</span>
+
+                </div>
+                <div class="course">
+                    <h3 class="titulo-ruta">Introducción a AI</h3>
+                    <p class="contenido-ruta">Usa inteligencia artificial sin ser experto en tecnología. Logra
+                        resultados impactantes
+                        rápidamente, mejorando a nivel personal y profesional.</p>
+                    <div class="course-info">
+                        <span>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div> 3 cursos
+                        </span>
+                        <span>7 horas</span>
+                    </div>
+                    <button class="course-button">Conocer ruta</button>
+                </div>
+
+                <div class="course">
+                    <h3 class="titulo-ruta">Bases para Analítica y Ciencia de Datos</h3>
+                    <p class="contenido-ruta">Descubre roles y herramientas de análisis y ciencia de datos desde cero.
+                        Aprende matemáticas
+                        esenciales, Excel, estadística y probabilidad.</p>
+                    <div class="course-info">
+                        <span>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div> 5 cursos
+                        </span>
+                        <span>10 horas</span>
+                    </div>
+                    <button class="course-button">Conocer ruta</button>
+                </div>
+            </div>
+
+            <!--CUARTO TEMA-->
+            <div id="ingenieria" class="section">
+                <div class="titulo-info">
+                    <h2>Ingeniería de Datos</h2>
+
+                    <span>Descubre el panorama general de la inteligencia artificial y ciencia de datos, sus diferencias
+                        y cómo se relacionan. Conoce herramientas de IA que puedes usar fácilmente. Además descubre cómo
+                        podrías iniciar en el campo de la ciencia de datos.</span>
+
+                </div>
+                <div class="course">
+                    <h3 class="titulo-ruta">Introducción a AI</h3>
+                    <p class="contenido-ruta">Usa inteligencia artificial sin ser experto en tecnología. Logra
+                        resultados impactantes
+                        rápidamente, mejorando a nivel personal y profesional.</p>
+                    <div class="course-info">
+                        <span>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div> 3 cursos
+                        </span>
+                        <span>7 horas</span>
+                    </div>
+                    <button class="course-button">Conocer ruta</button>
+                </div>
+
+                <div class="course">
+                    <h3 class="titulo-ruta">Bases para Analítica y Ciencia de Datos</h3>
+                    <p class="contenido-ruta">Descubre roles y herramientas de análisis y ciencia de datos desde cero.
+                        Aprende matemáticas
+                        esenciales, Excel, estadística y probabilidad.</p>
+                    <div class="course-info">
+                        <span>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div> 5 cursos
+                        </span>
+                        <span>10 horas</span>
+                    </div>
+                    <button class="course-button">Conocer ruta</button>
+                </div>
+            </div>
+
+            <!--QUINTO TEMA-->
+            <div id="machine" class="section">
+                <div class="titulo-info">
+                    <h2>Machine Learning</h2>
+
+                    <span>Descubre el panorama general de la inteligencia artificial y ciencia de datos, sus diferencias
+                        y cómo se relacionan. Conoce herramientas de IA que puedes usar fácilmente. Además descubre cómo
+                        podrías iniciar en el campo de la ciencia de datos.</span>
+
+                </div>
+                <div class="course">
+                    <h3 class="titulo-ruta">Introducción a AI</h3>
+                    <p class="contenido-ruta">Usa inteligencia artificial sin ser experto en tecnología. Logra
+                        resultados impactantes
+                        rápidamente, mejorando a nivel personal y profesional.</p>
+                    <div class="course-info">
+                        <span>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div> 3 cursos
+                        </span>
+                        <span>7 horas</span>
+                    </div>
+                    <button class="course-button">Conocer ruta</button>
+                </div>
+
+                <div class="course">
+                    <h3 class="titulo-ruta">Bases para Analítica y Ciencia de Datos</h3>
+                    <p class="contenido-ruta">Descubre roles y herramientas de análisis y ciencia de datos desde cero.
+                        Aprende matemáticas
+                        esenciales, Excel, estadística y probabilidad.</p>
+                    <div class="course-info">
+                        <span>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div> 5 cursos
+                        </span>
+                        <span>10 horas</span>
+                    </div>
+                    <button class="course-button">Conocer ruta</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <script src="/js/edad.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/carrera.js"></script>
+</body>
+
+</html>

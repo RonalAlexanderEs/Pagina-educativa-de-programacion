@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+body {
+    background: rgb(36, 36, 36);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'IBM Plex Sans', sans-serif;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    letter-spacing: 0px;
+}
+
+.header .logo {
+    cursor: pointer;
+}
+
+.header .logo img {
+    height: 70px;
+    width: auto;
+   
+}
+
+.header .logo img:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.header .nav-links {
+    list-style: none;
+}
+
+.header .nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .nav-links li:hover,
+.overlay a:hover {
+    transform: scale(1.1);
+}
+
+
+.header .nav-links a {
+    font-weight: 600;
+    font-size: 700;
+    color: #ffffff;
+
+}
+
+.header .nav-links li a:hover {
+    color: #4a5c6a;
+}
+
+.menu {
+    display: none;
+}
+
+.header .btn button,
+.header .menu button {
+    margin-left: 20px;
+    font-weight: 700;
+    color: #494a4b;
+    padding: 9px 25px;
+    background: #e2e2e2;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover,
+.header .menu button:hover {
+    background-color: #ccd0cf;
+    color: #253745;
+    transform: scale(1.1);
+}
+
+
+
+/*explorar*/
+.titu-explo{
+    font-size: 50px;
+    color: #fff;
+    width: 80%;
+}
+.sub-explo{
+    font-size: 15px;
+    width: 50%;
+    margin-top: 20px;
+    color: #59c05c;
+}
+
+
+.contenedor-filtro{
+    display: flex;
+    margin-bottom: 50px;
+    margin-top: 70px;
+}
+
+@media (max-width:768px){
+    .contenedor-filtro{
+        display: block;
+    }
+}
+
+.contenedor-letras{
+    display: block;
+}
+ h2 {
+    font-size: 24px;
+    margin-bottom: 50px;
+    color: #fff;
+    font-size: 30px;
+}
+p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.filter-container {
+    margin-bottom: 20px;
+    margin-top: 90px;
+    font-size: 10px;
+}
+
+option{
+    font-size: 10px;
+}
+
+#category-filter{
+    font-size: 15px;
+    background-color: #313131;
+    color: #ffffff;
+    border: none;
+
+}
+
+
+select {
+    padding: 10px;
+    background-color: #266857;
+    color: #ffffff;
+    border: 1px solid #266857;
+    border-radius: 5px;
+}
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.course-card {
+    background-color:#2b2c2c;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.course-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.course-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.course-instructor {
+    font-size: 12px;
+    color: #a0aec0;
+}
+.category-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #2a4365;
+}
+
+a{
+    text-decoration: none;
+}
+
+.contenedor{
+    max-width: auto;
+    margin: 20px 50px;
+}

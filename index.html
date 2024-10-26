@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Aprendizaje</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <!--ENCABEZADO-->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="explorar.html">Cursos</a></li>
+
+                <li><a href="planes.html">Planes</a></li>
+                <a href="#despliegue" onclick="closeNav()">Escuelas</a>
+                <li><a href="beca.html">Beca</a></li>
+                <li> <div class="dropdown">
+                    <span class="edad">Edad</span>
+                    <div class="dropdown-content">
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',], ['#ff3d3d', '#b92b2b', 'rgba(190, 50, 50, 0.856)', '#d03434'])">5-10
+                            años</a>
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',],['#00e5ff', '#025266', ' rgba(15, 121, 170, 0.856)', '#03c2db'])">10-18 años
+                            </a>
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',], ['#00ff7f', '#026634', 'rgba(15, 170, 80, 0.856)', '#03db6f'])">19+ años
+                            </a>
+                    </div>
+                </div></li>
+
+            </ul>
+        </nav>
+       
+
+
+
+        <a href="sesion.html" class="btn"><button class="acceder-btn">Acceder</button></a>
+        <!--MENU ADAPTATIVO-->
+        <a onclick="openNav()" href="#" class="menu"><button class="acceder-btn">Menu</button></a>
+        <div class="overlay" id="mobile-menu">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="explorar.html">Cursos</a>
+                <a href="planes.html">Planes</a>
+                <a href="#despliegue" onclick="closeNav()">Escuelas</a>
+                <a href="beca.html">Beca</a>
+                <div class="dropdown">
+                    <span class="edad">Edad</span>
+                    <div class="dropdown-content">
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',], ['#ff3d3d', '#b92b2b', 'rgba(190, 50, 50, 0.856)', '#d03434'])">5-10
+                            años</a>
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',],['#00e5ff', '#025266', ' rgba(15, 121, 170, 0.856)', '#03c2db'])">10-18 años
+                            </a>
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',], ['#00ff7f', '#026634', 'rgba(15, 170, 80, 0.856)', '#03db6f'])">19+ años
+                            </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </header>
+
+    <div class="contenedor">
+        <div class="encabezado">
+            <h1 class="encabezado-titulo">
+                Conoce un mundo lleno
+                <span>de Posibilidades</span>
+            </h1>
+            <p class="encabezado-parf">Conoce a los mejores profesionales en su campo y aprende de ellos</p>
+            <div class="contenedor-buscador">
+                <input placeholder="¿Qué quieres aprender?" class="encabezado-input search-input" type="text"
+                    id="aprender" name="aprender">
+                <div class="contenedor-suge">
+                    <ul class="suggestions"></ul>
+                </div>
+            </div>
+
+
+            <p class="encabezado-parf encabezado-letras">Paga por un curso individual U <a href="/planes.html"
+                    class="encabezado-parf encabezado-letras">obten los planes</a></p>
+
+        </div>
+    </div>
+
+    <!--TARJETAS DE ESCUELAS-->
+    <div class="contenedor-tarjetas" id="despliegue">
+
+        <div class="tarjeta-escuela">
+            <div class="icon data-science">🧠</div>
+            <div class="tarjeta-text">
+                <p class="tarjeta-title">ESCUELA DE</p>
+                <h2 class="escuela"> <a href="/escuela.html"> Data Science e Inteligencia Artificial</a></h2>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+
+
+
+
+        <div class="tarjeta-escuela">
+            <div class="icon cybersecurity">🛡️</div>
+            <div class="tarjeta-text">
+                <p class="tarjeta-title">ESCUELA DE</p>
+                <h2 class="escuela">Ciberseguridad</h2>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+
+        <div class="tarjeta-escuela">
+            <div class="icon leadership">👥</div>
+            <div class="tarjeta-text">
+                <p class="tarjeta-title">ESCUELA DE</p>
+                <h2 class="escuela">Liderazgo y Management</h2>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+
+        <div class="tarjeta-escuela">
+            <div class="icon english">🌐</div>
+            <div class="tarjeta-text">
+                <p class="tarjeta-title">ESCUELA DE</p>
+                <h2 class="escuela">English Academy</h2>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+
+        <div class="tarjeta-escuela">
+            <div class="icon web-dev">💻</div>
+            <div class="tarjeta-text">
+                <p class="tarjeta-title">ESCUELA DE</p>
+                <h2 class="escuela">Desarrollo Web</h2>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+
+        <div class="tarjeta-escuela">
+            <div class="icon marketing">📢</div>
+            <div class="tarjeta-text">
+                <p class="tarjeta-title">ESCUELA DE</p>
+                <h2 class="escuela">Marketing Digital</h2>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+
+        <div class="tarjeta-escuela">
+            <div class="icon product">✏️</div>
+            <div class="tarjeta-text">
+                <p class="tarjeta-title">ESCUELA DE</p>
+                <h2 class="escuela">Producto</h2>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+
+        <div class="tarjeta-escuela">
+            <div class="icon audiovisual">🎬</div>
+            <div class="tarjeta-text">
+                <p class="tarjeta-title">ESCUELA DE</p>
+                <h2 class="escuela">Contenido Audiovisual</h2>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+
+
+
+    </div>
+    <div class="contenedor-btn">
+        <button id="desplegarbtn">Ver todas las escuelas</button>
+    </div>
+
+    <div class="carrusel">
+        <div class="carrusel-logo">
+            <img src="/img/css.svg" alt="logo-carrusel">
+            <img src="/img/html.svg" alt="logo-carrusel">
+            <img src="/img/java.svg" alt="logo-carrusel">
+            <img src="/img/Js.svg" alt="logo-carrusel">
+            <img src="/img/php.svg" alt="logo-carrusel">
+            <img src="/img/mysql.svg" alt="logo-carrusel">
+            <img src="/img/Python.svg" alt="logo-carrusel">
+            <img src="/img/wlec.svg" alt="logo-carrusel">
+        </div>
+        <div class="carrusel-logo">
+            <img src="/img/css.svg" alt="logo-carrusel">
+            <img src="/img/html.svg" alt="logo-carrusel">
+            <img src="/img/java.svg" alt="logo-carrusel">
+            <img src="/img/Js.svg" alt="logo-carrusel">
+            <img src="/img/php.svg" alt="logo-carrusel">
+            <img src="/img/mysql.svg" alt="logo-carrusel">
+            <img src="/img/Python.svg" alt="logo-carrusel">
+            <img src="/img/wlec.svg" alt="logo-carrusel">
+        </div>
+
+    </div>
+    <!--MENU LATERAL-->
+    <div class="contenedor-subtitu contenedor">
+        <h2 class="subtitu">Los mejores beneficios <span>en tu Aprendizaje</span></h2>
+    </div>
+    <div class="contenedor-barra">
+
+        <div class="barra-menu">
+            <div class="menu-item" data-target="negociacion">Aprende algo nuevo cada 5 minutos</div>
+            <div class="menu-item" data-target="comunicacion">Rutas profesionales te guían de principiante a profesional
+            </div>
+            <div class="menu-item" data-target="influencia">Pon a prueba tu progreso de forma interactiva</div>
+            <div class="menu-item" data-target="descarga">Descarga las clases a tu teléfono y aprende sin Internet</div>
+            <div class="menu-item" data-target="certificado">Certificación en diversos campos</div>
+            <div class="menu-item" data-target="expande">Expande tu conocimiento</div>
+
+        </div>
+
+
+        <div class="barra-content">
+            <div id="negociacion" class="content-item">
+                <img src="/img/punto1.svg" alt="">
+            </div>
+            <div id="comunicacion" class="content-item">
+                <img src="/img/punto2.svg" alt="">
+            </div>
+            <div id="influencia" class="content-item">
+                <img src="/img/punto3.svg" alt="">
+            </div>
+
+            <div id="descarga" class="content-item">
+                <img src="/img/punto4.svg" alt="">
+            </div>
+            <div id="certificado" class="content-item">
+                <img src="/img/punto5.svg" alt="">
+            </div>
+            <div id="expande" class="content-item">
+                <img src="/img/punto6.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!--TARJETA PROFESORES-->
+    <div class="contenedor-subtitu contenedor">
+        <h2 class="subtitu">Los mejores profesionales <span>En su campo</span></h2>
+    </div>
+
+    <div class="container__cards">
+
+        <div class="card">
+            <div class="cover">
+                <img src="img/1.svg" alt="">
+                <div class="img__back"></div>
+            </div>
+            <div class="description">
+                <h2>Brayhan Gamarra</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, laboriosam.</p>
+        
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cover">
+                <img src="img/2.svg" alt="">
+                <div class="img__back"></div>
+            </div>
+            <div class="description">
+                <h2>Alex Escudero</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, laboriosam.</p>
+                
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cover">
+                <img src="img/3.svg" alt="">
+                <div class="img__back"></div>
+            </div>
+            <div class="description">
+                <h2>Dike Alburqueque</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, laboriosam.</p>
+               
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cover">
+                <img src="img/4.svg" alt="">
+                <div class="img__back"></div>
+            </div>
+            <div class="description">
+                <h2>Wilson Bedon</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, laboriosam.</p>
+              
+            </div>
+        </div>
+
+    </div>
+
+    <!--PLANES-->
+
+    <div class=" contenedor-plan ">
+        <h2 class="subtitu plan">Planes</h2>
+    </div>
+
+    <div class="pricing-container">
+        <div class="pricing-card">
+            <div class="plan-name">Básico</div>
+            <div class="plan-price"><img class="logo-planes" src="/img/logo-planes (3).svg" alt="">S/200/mes</div>
+            <ul class="plan-features">
+                <li>Suscripción para 1 personas</li>
+                <li>Contenido profesional y actualizado</li>
+                <li>Certificados digitales</li>
+                <li class="unavailable">Asesoria personalizada</li>
+                <li class="unavailable">Descarga de materiales</li>
+                <li class="unavailable">Acceso a todos los cursos</li>
+
+            </ul>
+            <div class="centrar-boton">
+                <a href="/pagobasi.html"><button class="subscribe-button">Suscríbete</button></a>
+            </div>
+        </div>
+        <div class="pricing-card highlighted">
+            <div class="plan-name">Expert</div>
+            <div class="plan-price"> <img class="logo-planes" src="/img/logo-planes (2).svg" alt="">S/350/año</div>
+            <ul class="plan-features">
+                <li>Suscripción para 2 personas</li>
+                <li>Contenido profesional y actualizado</li>
+                <li>Certificados digitales</li>
+                <li>Asesoria personalizada</li>
+                <li>Descarga de materiales</li>
+                <li>Acceso a todos los cursos</li>
+
+            </ul>
+            <div class="centrar-boton">
+                <a href="/pagoexpe.html"><button class="subscribe-button">Suscríbete</button></a>
+            </div>
+        </div>
+        <div class="pricing-card">
+            <div class="plan-name">Expert 4</div>
+            <div class="plan-price"> <img class="logo-planes" src="/img/logo-planes (1).svg" alt="">S/500/año</div>
+            <ul class="plan-features">
+                <li>Suscripción para 4 personas</li>
+                <li>Contenido profesional y actualizado</li>
+                <li>Certificados digitales</li>
+                <li>Asesoria personalizada</li>
+                <li>Descarga de materiales</li>
+                <li>Acceso a todos los cursos</li>
+
+            </ul>
+            <div class="centrar-boton">
+                <a href="/pagomaster.html"><button class="subscribe-button">Suscríbete</button></a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--JAVASCRIPT-->
+    <div>
+        <script src="/js/edad.js"></script>
+        <script src="/js/barralateral.js"></script>
+        <script src="/js/escuela.js"></script>
+        <script type="text/javascript" src="/js/nav.js"></script>
+        <script src="/js/buscador.js"></script>
+    </div>
+</body>
+
+</html>

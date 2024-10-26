@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Pago</title>
+    <link rel="stylesheet" href="/css/pago.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
+        </div>
+
+        <a href="sesion.html"  class="btn"><button  class="acceder-btn">Acceder</button></a>
+
+    </header>
+
+
+    <div class="container">
+        <div class="payment-info">
+            <h2>Información de pago</h2>
+            <p class="security-note">Todas las transacciones son seguras y encriptadas</p>
+            
+            <div class="payment-option" data-option="card">
+                <div class="option-header">
+                    <span>Tarjeta de crédito o débito</span>
+                    <div class="payment-logos">
+                        <img src="/img/visa-logo.svg" alt="Visa">
+                        <img src="/img/magiccard-logo.svg" alt="Mastercard">
+                        
+                    </div>
+                </div>
+                <div class="option-content"></div>
+            </div>
+            
+            <div class="payment-option" data-option="efectivo">
+                <div class="option-header">
+                    <span>Efectivo con Pago efectivo</span>
+                    <img src="/img/pago-logo.svg" alt="Pago Efectivo">
+                </div>
+                <div class="option-content"></div>
+            </div>
+            
+            <div class="payment-option" data-option="paypal">
+                <div class="option-header">
+                    <span>Paypal</span>
+                    <img src="/img/paypal-logo.svg" alt="PayPal">
+                </div>
+                <div class="option-content"></div>
+            </div>
+            
+            <div class="payment-option" data-option="bitcoin">
+                <div class="option-header">
+                    <span>Bitcoin</span>
+                    <img src="/img/bitcoin-logo.svg" alt="Bitcoin">
+                </div>
+                <div class="option-content"></div>
+            </div>
+        </div>
+        
+        <div class="plan-info">
+            <h2>Plan Expert 4</h2>
+            <p>Pago anual para 4 personas con renovación automática cada año</p>
+            
+            <div class="plan-details">
+                <p class="total">Total a pagar S/500/año</p>                
+                <p><a href="beca.html">¿Tienes beca?</a></p>
+                
+                <h3>Lo que obtienes con el plan</h3>
+                <ul class="plan-features">
+                    <li>Suscripción para 4 personas</li>
+                    <li>Contenido profesional y actualizado</li>
+                    <li>Certificados digitales</li>
+                    <li>Asesoria personalizada</li>
+                    <li>Descarga de materiales</li>
+                    <li>Acceso a todos los cursos</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="/js/pago.js"></script>
+</body>
+</html>

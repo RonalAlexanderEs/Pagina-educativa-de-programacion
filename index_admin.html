@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Meta tags y enlaces CSS -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>GUIMAR ADMIN</title>
+  <link rel="stylesheet" href="css/bootstrap.min-admin.css">
+  <link rel="stylesheet" href="css/custom-admin.css">
+  <link rel="stylesheet" href="css/style-admin.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  
+  <style>
+    /* Estilos de botones */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #4c7cf3; /* Color de fondo */
+      border: none;
+      border-radius: 5px; /* Bordes redondeados */
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin: 5px 0; /* Margen para separar botones */
+    }
+
+    .btn:hover {
+      background-color: #357ae8; /* Color al pasar el cursor */
+    }
+
+    .btn:focus {
+      outline: none; /* Eliminar el borde de enfoque */
+    }
+
+    .btn-edit {
+      background-color: #FFC107; /* Color amarillo para editar */
+    }
+
+    .btn-edit:hover {
+      background-color: #e0a800; /* Color al pasar el cursor */
+    }
+
+    .btn-delete {
+      background-color: #F44336; /* Color rojo para eliminar */
+    }
+
+    .btn-delete:hover {
+      background-color: #c82333; /* Color al pasar el cursor */
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="body-overlay"></div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <div class="sidebar-header">
+        <h3 id="guimar-admin">
+          <img src="img/logo.svg" class="img-fluid" />
+          <span>GM ADMIN</span>
+      </h3>
+      </div>
+      <ul class="list-unstyled component m-0">
+        <ul>
+          <li class="active" id="dashboard-tab"><a href="#" id="dashboard-button"><i class="material-icons">dashboard</i>Dashboard</a></li>
+          <li id="cursos-tab"><a href="#"><i class="material-icons">school</i>Cursos</a></li>
+          <li id="alumnos-tab"><a href="#"><i class="material-icons">person</i>Alumnos</a></li>
+          <li id="profesor-tab"><a href="#"><i class="material-icons">group</i>Profesor</a></li>
+          <li id="bandeja-tab"><a href="#"><i class="material-icons">inbox</i>Bandeja de entrada</a></li>
+          <li id="becas-tab"><a href="#"><i class="material-icons">card_giftcard</i>Ver Solicitudes de Becas</a></li>
+          <li id="certificados-tab"><a href="#"><i class="material-icons">verified</i>Certificados</a></li>
+          <li id="estadisticas-tab"><a href="#"><i class="material-icons">analytics</i>Estadísticas (Usuarios Registrados)</a></li>
+          <li id="ingresos-tab"><a href="#"><i class="material-icons">attach_money</i>Ingresos</a></li>
+          <li id="gestión-pagos-tab"><a href="#"><i class="material-icons">payments</i>Gestión de Pagos</a></li>
+      </ul>
+      
+      </ul>
+    </div>
+
+    <!-- Content -->
+    <div id="content">
+      <div class="top-navbar">
+        <!-- Top bar with navbar, profile, etc. -->
+      </div>
+
+      <!-- Main content -->
+      <div class="main-content">
+
+      <!-- Dashboard -->
+<div id="dashboard-content" class="content-tab">
+  <h2>Dashboard</h2>
+  <div class="stats">
+      <p>Número de Estudiantes: <span id="num-alumnos">0</span></p>
+      <p>Número de Docentes: <span id="num-profesores">0</span></p>
+      <p>Usuarios Activos: <span id="usuarios-activos">0</span></p>
+  </div>
+  <div>
+      <canvas id="suscripcionChart" width="400" height="200"></canvas>
+  </div>
+</div>
+<!-- Certificados -->
+<div id="certificados-content" class="content-tab" style="display: none;">
+  <h2>Enviar Certificados a Alumnos</h2>
+
+  <table class="table table-bordered" id="certificados-table">
+    <thead>
+      <tr>
+        <th>Nombre del Alumno</th>
+        <th>Curso Completado</th>
+        <th>Certificado</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Juan Pérez</td>
+        <td>Programación Web</td>
+        <td><input type="file" accept=".pdf,.doc,.docx" id="certificado-juan"></td>
+        <td>
+          <select>
+            <option value="enviado">Enviado</option>
+            <option value="no_enviado" selected>No enviado</option>
+          </select>
+        </td>
+        <td>
+          <button class="btn" onclick="enviarCertificado(this)">Enviar Certificado</button>
+        </td>
+      </tr>
+      <!-- Más filas pueden ser añadidas aquí -->
+    </tbody>
+  </table>
+</div>
+<!-- Estadisticas -->
+<div id="estadisticas-content" class="content-tab" style="display: none;">
+  <h2>Estadísticas de Usuarios Registrados</h2>
+  <canvas id="usuariosChart" width="400" height="200"></canvas>
+  <div class="stats">
+      <p>Total de Usuarios: <span id="total-usuarios">0</span></p>
+      <p>Usuarios Activos: <span id="usuarios-activos">0</span></p>
+      <p>Usuarios Inactivos: <span id="usuarios-inactivos">0</span></p>
+  </div>
+</div>
+<!-- Gestión de Pagos -->
+<div id="gestion-pagos-content" class="content-tab" style="display:none;">
+  <h2>Gestión de Pagos</h2>
+  <table id="pagos-table" class="table">
+      <thead>
+          <tr>
+              <th>Nombre Alumno</th>
+              <th>Tipo de Pago</th>
+              <th>Monto</th>
+              <th>Fecha de Pago</th>
+              <th>Estado</th>
+          </tr>
+      </thead>
+      <tbody>
+          <!-- Los datos de los pagos se llenarán aquí -->
+      </tbody>
+  </table>
+</div>
+
+
+
+
+        <!-- Alumnos -->
+        <div id="alumnos-content" class="content-tab" style="display: none;">
+          <h2>Gestión de Alumnos</h2>
+          <button class="btn" onclick="addAlumno()">Agregar Alumno</button>
+          <table class="table table-bordered" id="alumnos-table">
+              <thead>
+                  <tr>
+                      <th>Nombre</th>
+                      <th>Fecha de Nacimiento</th>
+                      <th>Correo</th>
+                      <th>Plan</th>
+                      <th>Acciones</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- Las filas de alumnos serán insertadas aquí dinámicamente -->
+              </tbody>
+          </table>
+      </div>
+      
+
+        <!-- Profesor -->
+        <div id="profesor-content" class="content-tab" style="display: none;">
+          <h2>Gestión de Profesores</h2>
+          <button class="btn" onclick="addProfesor()">Agregar Profesor</button>
+          <table class="table table-bordered" id="profesor-table">
+            <thead>
+              <tr>
+                <th>Usuario</th>
+                <th>Edad</th>
+                <th>Correo</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+
+<!-- Ingresos -->
+<div id="ingresos-content" class="content-tab" style="display: none;">
+  <h2>Ingresos</h2>
+  <div class="stats">
+      <p>Ingresos Totales: <span id="total-ingresos">$0</span></p>
+      <p>Ingresos Mensuales: <span id="ingresos-mensuales">$0</span></p>
+  </div>
+  <canvas id="ingresosChart" width="400" height="200"></canvas>
+</div>
+
+<!-- Bandeja de Entrada -->
+<div id="bandeja-content" class="content-tab" style="display: none;">
+  <h2>Bandeja de Entrada</h2>
+  <table class="table table-bordered" id="bandeja-table">
+    <thead>
+      <tr>
+        <th>Remitente</th>
+        <th>Asunto</th>
+        <th>Fecha</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Ejemplo de fila de mensaje -->
+      <tr>
+        <td>Juan Pérez</td>
+        <td>Bienvenido a la plataforma</td>
+        <td>17/10/2024</td>
+        <td>
+          <button class="btn" onclick="verMensaje(this)">Ver</button>
+          <button class="btn btn-delete" onclick="eliminarMensaje(this)">Eliminar</button>
+        </td>
+      </tr>
+      <!-- Aquí se pueden añadir más mensajes -->
+    </tbody>
+  </table>
+</div>
+<!-- Solicitudes de Becas -->
+<div id="becas-content" class="content-tab" style="display: none;">
+  <h2>Ver Solicitudes de Becas</h2>
+  <table class="table table-bordered" id="becas-table">
+    <thead>
+      <tr>
+        <th>Nombre del Estudiante</th>
+        <th>Descripción de la Solicitud</th>
+        <th>Documentos Adjuntos</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Ejemplo de fila -->
+      <tr>
+        <td>Juan Pérez</td>
+        <td>Solicito beca por necesidad económica.</td>
+        <td><a href="documento1.pdf">Documento1.pdf</a></td>
+        <td>
+          <select onchange="cambiarEstado(this)">
+            <option value="aprobado">Aprobado</option>
+            <option value="en_revision" selected>En revisión</option>
+            <option value="rechazado">Rechazado</option>
+          </select>
+        </td>
+        <td>
+          <button class="btn btn-delete" onclick="deleteSolicitud(this)"><i class="material-icons">delete</i></button>
+        </td>
+      </tr>
+      <tr>
+        <td>María López</td>
+        <td>Solicito beca para programa de verano.</td>
+        <td><a href="documento2.pdf">Documento2.pdf</a></td>
+        <td>
+          <select onchange="cambiarEstado(this)">
+            <option value="aprobado">Aprobado</option>
+            <option value="en_revision" selected>En revisión</option>
+            <option value="rechazado">Rechazado</option>
+          </select>
+        </td>
+        <td>
+          <button class="btn btn-delete" onclick="deleteSolicitud(this)"><i class="material-icons">delete</i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+<!-- Cursos -->
+<div id="cursos-content" class="content-tab">
+  <h2>Gestión de Cursos</h2>
+
+  <!-- Formulario para agregar cursos -->
+  <div>
+    <h4>Agregar nuevo curso</h4>
+    <input type="text" id="curso-nombre" placeholder="Nombre del Curso" required>
+    <textarea id="curso-descripcion" placeholder="Descripción del Curso" required></textarea>
+    
+    <!-- Sección de carga de video -->
+    <label for="curso-video">Subir Video:</label>
+    <input type="file" id="curso-video" accept="video/*">
+<br>
+    <!-- Sección de carga de documento -->
+    <label for="curso-documento">Subir Documento:</label>
+    <input type="file" id="curso-documento" accept=".pdf,.doc,.docx">
+<br>
+    <button class="btn" onclick="guardarCurso()">Guardar Curso</button>
+  </div>
+
+  <!-- Tabla para mostrar los cursos -->
+  <table class="table table-bordered" id="cursos-table">
+    <thead>
+
+    </thead>
+    <tbody>
+      <!-- Las filas de los cursos se agregarán aquí dinámicamente -->
+    </tbody>
+  </table>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript para CRUD y gráficos -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="/js/grafica.js"></script>
+  <script src="/js/cursos.js"></script>
+  <script src="/js/CRUDS.js"></script>
+  <script src="/js/Bandeja_entrada.js"></script>ç
+  <script src="/js/becas-admin.js"></script>
+  <script src="/js/certificados.js"></script>
+  <script src="/js/Estadisticas.js"></script>
+  <script src="/js/ingresos.js"></script>
+  <script src="/js/GestionPagos.js"></script>
+  <script src="/js/dashboard.js"></script>
+
+
+  <script>
+    // Mostrar secciones según pestaña seleccionada
+    document.getElementById('alumnos-tab').addEventListener('click', function() {
+      showTab('alumnos-content');
+    });
+
+    document.getElementById('profesor-tab').addEventListener('click', function() {
+      showTab('profesor-content');
+    });
+
+    document.getElementById('cursos-tab').addEventListener('click', function() {
+      showTab('cursos-content');
+    });
+
+    function showTab(tabId) {
+      document.querySelectorAll('.content-tab').forEach(function(tab) {
+        tab.style.display = 'none';
+      });
+      document.getElementById(tabId).style.display = 'block';
+    }
+    document.getElementById('guimar-admin').addEventListener('click', function() {
+    window.location.href = 'index_admin.html'; // Cambia a la URL que desees
+});
+
+  </script>
+</body>
+</html>

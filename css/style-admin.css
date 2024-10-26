@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4; /* Color de fondo */
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Sidebar */
+#sidebar {
+  background: #105ba1;
+  color: #fff;
+  width: 250px;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  padding-top: 20px;
+  transition: all 0.3s;
+}
+
+#sidebar h3 {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+#sidebar ul {
+  list-style: none;
+}
+
+#sidebar ul li {
+  padding: 10px;
+  text-align: left;
+}
+
+#sidebar ul li a {
+  color: #fff;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#sidebar ul li a:hover,
+#sidebar ul li.active a {
+  background: #105ba1; /* Color de fondo al pasar el mouse */
+}
+
+/* Contenido Principal */
+#content {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+
+.main-content {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Tablas */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.table th {
+  background-color: #1974d2;
+  color: white;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1; /* Color de fondo al pasar el mouse */
+}
+
+/* Botones */
+button {
+  background-color: #1974d2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #105ba1; /* Color de fondo al pasar el mouse */
+}
+
+/* Formulario */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+input[type="file"] {
+  margin-top: 10px;
+}
+
+/* Estilos para la Noticia */
+.acme-news-ticker {
+  background: #fff;
+  position: relative;
+  height: 45px;
+  border: 1px solid #1974d2;
+  margin-top: 45px;
+}
+
+.acme-news-ticker-label {
+  background: #1974d2;
+  padding: 10px;
+  width: auto;
+  float: left;
+  margin-right: 15px;
+  line-height: normal;
+  height: 100%;
+  color: #fff;
+}
+
+/* Ticker */
+.acme-news-ticker-box {
+  height: 100%;
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+.acme-news-ticker-box ul {
+  width: 100%;
+  list-style-type: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+.acme-news-ticker-controls button {
+  height: 100%;
+  background: #f6f6f6;
+  padding: 0;
+  width: 40px;
+  border-color: #eeeeee;
+  border-style: solid;
+  border-width: 0 0 0 1px;
+  cursor: pointer;
+}
+
+.acme-news-ticker-controls button:hover {
+  background: #eeeeee;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  #sidebar {
+    width: 100%;
+    height: auto;
+  }
+  #content {
+    margin-left: 0;
+  }
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4c7cf3; /* Color de fondo */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #357ae8; /* Color al pasar el cursor */
+}
+
+.btn:focus {
+  outline: none; /* Eliminar el borde de enfoque */
+}
+.course-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #1974d2;
+}
+
+.course-form label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: block;
+  color: #333;
+}
+
+.course-form input[type="text"],
+.course-form input[type="file"],
+.course-form input[type="number"],
+.course-form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.course-form textarea {
+  resize: vertical;
+}
+
+.course-form button {
+  width: 100%;
+  background-color: #1974d2;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.course-form button:hover {
+  background-color: #105ba1;
+}
+    /* Estilos de botones */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #4c7cf3; /* Color de fondo */
+      border: none;
+      border-radius: 5px; /* Bordes redondeados */
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin: 5px 0; /* Margen para separar botones */
+    }
+
+    .btn:hover {
+      background-color: #357ae8; /* Color al pasar el cursor */
+    }
+
+    .btn:focus {
+      outline: none; /* Eliminar el borde de enfoque */
+    }
+
+    .btn-edit {
+      background-color: #FFC107; /* Color amarillo para editar */
+    }
+
+    .btn-edit:hover {
+      background-color: #e0a800; /* Color al pasar el cursor */
+    }
+
+    .btn-delete {
+      background-color: #F44336; /* Color rojo para eliminar */
+    }
+
+    .btn-delete:hover {
+      background-color: #c82333; /* Color al pasar el cursor */
+    }
+

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temario</title>
+    <link rel="stylesheet" href="/css/tema.css">
+</head>
+
+<body>
+
+
+    <!--ENCABEZADO-->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="explorar.html">Cursos</a></li>
+
+                <li><a href="planes.html">Planes</a></li>
+                <a href="#despliegue" onclick="closeNav()">Escuelas</a>
+                <li><a href="beca.html">Beca</a></li>
+                <li> <div class="dropdown">
+                    <span class="edad">Edad</span>
+                    <div class="dropdown-content">
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',], ['#ff3d3d', '#b92b2b', 'rgba(190, 50, 50, 0.856)', '#d03434'])">5-10
+                            años</a>
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',],['#00e5ff', '#025266', ' rgba(15, 121, 170, 0.856)', '#03c2db'])">10-18 años
+                            </a>
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',], ['#00ff7f', '#026634', 'rgba(15, 170, 80, 0.856)', '#03db6f'])">19+ años
+                            </a>
+                    </div>
+                </div></li>
+
+            </ul>
+        </nav>
+       
+
+
+
+        <a href="sesion.html" class="btn"><button class="acceder-btn">Acceder</button></a>
+        <!--MENU ADAPTATIVO-->
+        <a onclick="openNav()" href="#" class="menu"><button class="acceder-btn">Menu</button></a>
+        <div class="overlay" id="mobile-menu">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="explorar.html">Cursos</a>
+                <a href="planes.html">Planes</a>
+                <a href="#despliegue" onclick="closeNav()">Escuelas</a>
+                <a href="beca.html">Beca</a>
+                <div class="dropdown">
+                    <span class="edad">Edad</span>
+                    <div class="dropdown-content">
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',], ['#ff3d3d', '#b92b2b', 'rgba(190, 50, 50, 0.856)', '#d03434'])">5-10
+                            años</a>
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',],['#00e5ff', '#025266', ' rgba(15, 121, 170, 0.856)', '#03c2db'])">10-18 años
+                            </a>
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',], ['#00ff7f', '#026634', 'rgba(15, 170, 80, 0.856)', '#03db6f'])">19+ años
+                            </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </header>
+
+    <!--TEMA-->
+
+    <div class="container">
+        <div class="course-header">
+
+
+            <div class="course-info">
+                <h1>Curso de Introducción a Inteligencia Artificial</h1>
+                <div class="rating">★★★★★ <span class="letras-rating">13.0 Opiniones</span> <span
+                        class="badge">Básico</span></div>
+                <p class="description">Optimiza tu eficiencia profesional y maximiza tus resultados usando herramientas
+                    de inteligencia artificial como ChatGPT y Copilot. Conocerás qué es la IA e integrarás soluciones
+                    para transformar tareas complejas en procesos simples.</p>
+                <a href="/planes.html"> <button class="btn-tema ">Empieza ya</button></a>
+            </div>
+            <div class="course-image">
+                <img src="/img/TEMA-IA.svg" alt="AI Course Image">
+            </div>
+        </div>
+
+        <h2>Temario y recursos del <span class="curso-sub">curso de Introducción a IA</span></h2>
+
+        <div class="course-content">
+            <div class="sidebar">
+
+                <div class="content-item">
+                    <h3 class="recursos-item">Para este curso vas a necesitar</h3>
+                    <p class="recursos-parf">3 Horas de contenido</p>
+                    <p class="recursos-parf">12 Horas de práctica</p>
+                </div>
+                <div class="content-item">
+                    <h3 class="recursos-item">Conocimientos previos</h3>
+                    <p class="recursos-parf">Ninguno</p>
+                </div>
+                <div class="content-item">
+                    <h3 class="recursos-item">Software para este curso</h3>
+                    <ul class="software-list">
+                        <li>Microsoft Excel o Google Sheets</li>
+                        <li>Navegador web</li>
+                        <li>ChatGPT Plus</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+            <div class="main-content">
+                <div class="content-item">
+                    <h3 class="titulo-contenido">Fundamentos de inteligencia artificial (IA)</h3>
+                    <div class="content-item clases">
+                        <a href="contenido.html">
+                        <p class="clase-item">¿Cómo funciona la inteligencia artificial?</p></a>
+                    </div>
+
+                    <div class="content-item clases">
+                        <p class="clase-item">¿Cómo usar inteligencia artificial en tu trabajo?</p>
+                    </div>
+
+                    <div class="content-item clases cerrado">
+                        <p class="clase-item ">¿Cómo funciona la inteligencia artificial?</p>
+                    </div>
+
+                </div>
+
+                <div class="content-item">
+                    <h3 class="titulo-contenido">IA dentro de la empresa</h3>
+
+                    <div class="content-item clases cerrado">
+                        <p class="clase-item cerrado">¿Cómo elegir la herramienta de IA adecuada?</p>
+                    </div>
+
+                    <div class="content-item clases cerrado">
+                        <p class="clase-item cerrado">¿Cómo elegir la herramienta de IA adecuada?</p>
+                    </div>
+                    <div class="content-item clases cerrado">
+                        <p class="clase-item cerrado">¿Cómo elegir la herramienta de IA adecuada?</p>
+                    </div>
+                    <div class="content-item clases cerrado">
+                        <p class="clase-item cerrado">¿Cómo elegir la herramienta de IA adecuada?</p>
+                    </div>
+                    <div class="content-item clases cerrado">
+                        <p class="clase-item cerrado">¿Cómo elegir la herramienta de IA adecuada?</p>
+                    </div>
+                    <div class="content-item clases cerrado">
+                        <p class="clase-item cerrado">¿Cómo elegir la herramienta de IA adecuada?</p>
+                    </div>
+                    <div class="content-item clases cerrado">
+                        <p class="clase-item cerrado">¿Cómo elegir la herramienta de IA adecuada?</p>
+                    </div>
+                    <div class="content-item clases cerrado">
+                        <p class="clase-item cerrado">¿Cómo elegir la herramienta de IA adecuada?</p>
+                    </div>
+
+
+                </div>
+
+                <div class="content-item">
+                    <h3 class="titulo-contenido">IA para toma de decisiones</h3>
+
+                    <div class="content-item clases cerrado">
+                        <p class="clase-item cerrado">Lorem ipsum dolor sit amet consectetur</p>
+                    </div>
+
+                    <div class="content-item clases cerrado">
+                        <p class="clase-item cerrado">Lorem ipsum dolor sit amet consectetur</p>
+                    </div>
+                    <div class="content-item clases cerrado">
+                        <p class="clase-item cerrado">Lorem ipsum dolor sit amet consectetur</p>
+                    </div>
+                    <div class="content-item clases cerrado">
+                        <p class="clase-item cerrado">Lorem ipsum dolor sit amet consectetur</p>
+                    </div>
+                    <div class="content-item clases cerrado">
+                        <p class="clase-item cerrado">Lorem ipsum dolor sit amet consectetur</p>
+                    </div>
+                    <div class="content-item clases cerrado">
+                        <p class="clase-item cerrado">Lorem ipsum dolor sit amet consectetur</p>
+                    </div>
+                    <div class="content-item clases cerrado">
+                        <p class="clase-item cerrado">Lorem ipsum dolor sit amet consectetur</p>
+                    </div>
+                    <div class="content-item clases cerrado">
+                        <p class="clase-item cerrado">Lorem ipsum dolor sit amet consectetur</p>
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+   <!--PLANES-->
+
+   <div class=" contenedor-plan ">
+    <h2 class="subtitu plan">Planes</h2>
+</div>
+
+<div class="pricing-container">
+    <div class="pricing-card">
+        <div class="plan-name">Básico</div>
+        <div class="plan-price"><img class="logo-planes" src="/img/logo-planes (3).svg" alt="">S/200/mes</div>
+        <ul class="plan-features">
+            <li>Suscripción para 1 personas</li>
+            <li>Contenido profesional y actualizado</li>
+            <li>Certificados digitales</li>
+            <li class="unavailable">Asesoria personalizada</li>
+            <li class="unavailable">Descarga de materiales</li>
+            <li class="unavailable">Acceso a todos los cursos</li>
+       
+        </ul>
+        <div class="centrar-boton">
+            <a href="/pagobasi.html"><button class="subscribe-button">Suscríbete</button></a>
+            </div>
+    </div>
+    <div class="pricing-card highlighted">
+        <div class="plan-name">Expert</div>
+        <div class="plan-price"> <img class="logo-planes" src="/img/logo-planes (2).svg" alt="">S/350/año</div>
+        <ul class="plan-features">
+            <li>Suscripción para 2 personas</li>
+            <li>Contenido profesional y actualizado</li>
+            <li>Certificados digitales</li>
+            <li>Asesoria personalizada</li>
+            <li>Descarga de materiales</li>
+            <li>Acceso a todos los cursos</li>
+           
+        </ul>
+        <div class="centrar-boton">
+            <a href="/pagoexpe.html"><button class="subscribe-button">Suscríbete</button></a>
+            </div>
+    </div>
+    <div class="pricing-card">
+        <div class="plan-name">Expert 4</div>
+        <div class="plan-price"> <img class="logo-planes" src="/img/logo-planes (1).svg" alt="">S/500/año</div>
+        <ul class="plan-features">
+            <li>Suscripción para 4 personas</li>
+            <li>Contenido profesional y actualizado</li>
+            <li>Certificados digitales</li>
+            <li>Asesoria personalizada</li>
+            <li>Descarga de materiales</li>
+            <li>Acceso a todos los cursos</li>
+      
+        </ul>
+        <div class="centrar-boton">
+            <a href="/pagomaster.html"><button class="subscribe-button">Suscríbete</button></a>
+        </div>
+    </div>
+</div>
+
+<script src="/js/edad.js"></script>
+
+
+</body>
+
+</html>
