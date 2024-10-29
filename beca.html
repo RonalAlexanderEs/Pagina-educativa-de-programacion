@@ -1,174 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/becas.css">
     <title>Becas</title>
 </head>
-
 <body>
 
-    <div class="container">
-        <header>Postula a una beca</header>
+<div class="container">
+    <header>Postula a una beca</header>
 
-        <form action="#">
-
-            <!--PRIMER FORMULARIO-->
-            <div class="form first">
-                <div class="info personal">
-                    <span class="titulo">Datos del postulante</span>
-
-                    <div class="fields">
-                        <div class="input-field">
-                            <label>Nombre</label>
-                            <input type="text" placeholder="Ingresar nombre completo" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>DNI</label>
-                            <input type="text" placeholder="Ingresar su DNI" required>
-                        </div>
-
-
-                        <div class="input-field">
-                            <label>Fecha de nacimiento</label>
-                            <input type="date" placeholder="Ingresar fecha de nacimiento" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Email</label>
-                            <input type="text" placeholder="Ingresar correo" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Número de teléfono</label>
-                            <input type="tel" placeholder="Ingresar número telefónicos" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Sexo</label>
-                            <input type="text" placeholder="Ingresar sexo" required>
-                        </div>
+    <form id="beca-form">
+        <!-- PRIMER FORMULARIO -->
+        <div class="form first">
+            <div class="info personal">
+                <span class="titulo">Datos del postulante</span>
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Nombre</label>
+                        <input type="text" id="nombre" placeholder="Ingresar nombre completo" required>
                     </div>
-                </div>
-
-                <div class="info CURSO">
-                    <span class="titulo">Residencia</span>
-
-                    <div class="fields">
-                        <div class="input-field">
-                            <label>País</label>
-                            <input type="text" placeholder="Ingresar país" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Departamento</label>
-                            <input type="text" placeholder="Ingresar departamento" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Distrito</label>
-                            <input type="text" placeholder="Ingresar distrito" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Dirección domiciliaria</label>
-                            <input type="tel" placeholder="Ingresar dirección domiciliaria" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Código postal</label>
-                            <input type="text" placeholder="Ingresar código postal" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Referencia</label>
-                            <input type="text" placeholder="Ingresar referencia" required>
-                        </div>
+                    <div class="input-field">
+                        <label>DNI</label>
+                        <input type="text" id="dni" placeholder="Ingresar su DNI" required>
                     </div>
-
-                    <button class="nextBtn">
-                        <span class="btnText">Siguiente</span>
-                    </button>
+                    <div class="input-field">
+                        <label>Fecha de nacimiento</label>
+                        <input type="date" id="fecha-nacimiento" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Email</label>
+                        <input type="email" id="email" placeholder="Ingresar correo" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Número de teléfono</label>
+                        <input type="tel" id="telefono" placeholder="Ingresar número telefónico" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Sexo</label>
+                        <input type="text" id="sexo" placeholder="Ingresar sexo" required>
+                    </div>
                 </div>
             </div>
 
-            <!--SEGUNDO FORMULARIO-->
-            <div class="form second">
-                <div class="info beca">
-                    <span class="titulo">Solicitud para la beca</span>
-
-                    <div class="fields">
-                        <div class="input-field">
-                            <label>Código de estudiante</label>
-                            <input type="text" placeholder="Ingresar código de estudiante" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Nivel educativo</label>
-                            <select id="levelEdu" required>
-                                <option value="" disabled selected>Seleccionar</option>
-                                <option value="beca_parcial">Básico</option>
-                                <option value="beca_completa">Secundario</option>
-                                <option value="beca_completa">Superior</option>
-                            </select>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Area deseada</label>
-                            <select id="areaBeca" required>
-                                <option value="" disabled selected>Seleccionar</option>
-                                <option value="beca_parcial">Data Science</option>
-                                <option value="beca_completa">Ciberseguridad</option>
-                                <option value="beca_parcial">Programación Móvil</option>
-                                <option value="beca_completa">Desarrollo Web</option>
-                                <option value="beca_parcial">English Academy</option>
-                                <option value="beca_completa">Robótica</option>
-                            </select>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Tipo de Beca</label>
-                            <select id="becaType" required>
-                                <option value="" disabled selected>Seleccionar</option>
-                                <option value="beca_parcial">Beca parcial</option>
-                                <option value="beca_completa">Beca completa</option>
-                            </select>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Subir carta de solicitud</label>
-                            <label for="fileUpload">Seleccionar archivo</label>
-                            <input type="file" id="fileUpload" name="fileUpload" accept=".jpg, .jpeg, .png, .pdf"
-                                required>
-                        </div>
-
-
-                        <div class="input-field">
-                            <label>Subir comprobante</label>
-                            <label for="fileUpload">Seleccionar archivo</label>
-                            <input type="file" id="fileUpload" name="fileUpload" accept=".jpg, .jpeg, .png, .pdf, .mp4, .avi" required>
-                        </div>
+            <div class="info CURSO">
+                <span class="titulo">Residencia</span>
+                <div class="fields">
+                    <div class="input-field">
+                        <label>País</label>
+                        <input type="text" id="pais" placeholder="Ingresar país" required>
                     </div>
-                </div>
-
-                <div class="buttons">
-                    <div class="backBtn">
-                        <span class="btnText">Anterior</span>
+                    <div class="input-field">
+                        <label>Departamento</label>
+                        <input type="text" id="departamento" placeholder="Ingresar departamento" required>
                     </div>
-
-                    <button class="nextBtn">
-                        <span class="btnText">Enviar Solicitud</span>
-                    </button>
+                    <div class="input-field">
+                        <label>Distrito</label>
+                        <input type="text" id="distrito" placeholder="Ingresar distrito" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Dirección domiciliaria</label>
+                        <input type="text" id="direccion" placeholder="Ingresar dirección domiciliaria" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Código postal</label>
+                        <input type="text" id="codigo-postal" placeholder="Ingresar código postal" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Referencia</label>
+                        <input type="text" id="referencia" placeholder="Ingresar referencia" required>
+                    </div>
                 </div>
             </div>
-    </div>
+        </div>
+        
+        <!-- SEGUNDO FORMULARIO -->
+        <div class="form second" style="display: none;">
+            <div class="info beca">
+                <span class="titulo">Solicitud para la beca</span>
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Código de estudiante</label>
+                        <input type="text" id="codigo-estudiante" placeholder="Ingresar código de estudiante" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Nivel educativo</label>
+                        <select id="nivel-educativo" required>
+                            <option value="" disabled selected>Seleccionar</option>
+                            <option value="basico">Básico</option>
+                            <option value="secundario">Secundario</option>
+                            <option value="superior">Superior</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Área deseada</label>
+                        <select id="area-beca" required>
+                            <option value="" disabled selected>Seleccionar</option>
+                            <option value="data_science">Data Science</option>
+                            <option value="ciberseguridad">Ciberseguridad</option>
+                            <option value="programacion_movil">Programación Móvil</option>
+                            <option value="desarrollo_web">Desarrollo Web</option>
+                            <option value="english_academy">English Academy</option>
+                            <option value="robotica">Robótica</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Tipo de Beca</label>
+                        <select id="tipo-beca" required>
+                            <option value="" disabled selected>Seleccionar</option>
+                            <option value="parcial">Beca parcial</option>
+                            <option value="completa">Beca completa</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Subir carta de solicitud</label>
+                        <input type="file" id="carta-solicitud" accept=".jpg, .jpeg, .png, .pdf" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Subir comprobante</label>
+                        <input type="file" id="comprobante" accept=".jpg, .jpeg, .png, .pdf, .mp4, .avi" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botones "Siguiente", "Atrás" y "Aceptar" -->
+        <div class="buttons">
+            <button type="button" class="nextBtn">Siguiente</button>
+            <button type="button" class="backBtn">Atrás</button>
+            <button type="submit" class="submit-btn" disabled>Aceptar</button>
+        </div>
     </form>
-    </div>
+</div>
 
-    <script src="/js/becas.js"></script>
+<script src="/js/becas.js"></script>
 </body>
-
 </html>

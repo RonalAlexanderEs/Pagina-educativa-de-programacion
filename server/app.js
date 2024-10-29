@@ -4,38 +4,42 @@ import { pool } from './db.js';
 import { PORT } from './config.js';
 import bcrypt from 'bcrypt'; // Importa bcrypt para hashear contraseñas
 import path from 'path'; // Importar el módulo path
+import becasRoutes from './becas.js'; // Asegúrate de que esta línea sea correcta
+
 
 const app = express();
 
 // Middleware para parsear el cuerpo de las solicitudes como JSON
 app.use(bodyParser.json());
 app.use(express.static(path.join(process.cwd()))); // Sirve archivos estáticos desde la raíz del proyecto
+app.use('/api', becasRoutes); // Usa el router de becas
 
 // Ruta para servir el index.html
 app.get('/', (req, res) => {
   res.sendFile(path.join(process.cwd(), 'index.html')); // Asegúrate de que el archivo esté en la raíz del proyecto
 });
+
 // Ruta para obtener todos los alumnos con el rol de "usuario"
 app.get('/api/alumnos', async (req, res) => {
   try {
-      const [rows] = await pool.query("SELECT nombre, apellidos, correo, fecha_nacimiento FROM usuarios WHERE rol = 'usuario'");
-      res.json(rows);
+    const [rows] = await pool.query("SELECT nombre, apellidos, correo, fecha_nacimiento FROM usuarios WHERE rol = 'usuario'");
+    res.json(rows);
   } catch (error) {
-      console.error("Error al obtener los alumnos:", error);
-      res.status(500).json({ message: 'Error al obtener los alumnos' });
-  }
-});
-// Ruta para obtener todos los usuarios con rol de "admin" (profesores)
-app.get('/api/profesores', async (req, res) => {
-  try {
-      const [profesores] = await pool.query("SELECT nombre, correo FROM usuarios WHERE rol = 'admin'");
-      res.json(profesores);
-  } catch (error) {
-      console.error('Error al obtener los profesores:', error);
-      res.status(500).json({ message: 'Error al obtener los profesores' });
+    console.error("Error al obtener los alumnos:", error);
+    res.status(500).json({ message: 'Error al obtener los alumnos' });
   }
 });
 
+// Ruta para obtener todos los usuarios con rol de "admin" (profesores)
+app.get('/api/profesores', async (req, res) => {
+  try {
+    const [profesores] = await pool.query("SELECT nombre, correo FROM usuarios WHERE rol = 'admin'");
+    res.json(profesores);
+  } catch (error) {
+    console.error('Error al obtener los profesores:', error);
+    res.status(500).json({ message: 'Error al obtener los profesores' });
+  }
+});
 
 // Ruta para obtener todos los usuarios
 app.get('/api/usuarios', async (req, res) => {
@@ -106,26 +110,28 @@ app.post('/api/login', async (req, res) => {
     console.error('Error al iniciar sesión:', error);
     res.status(500).json({ error: 'Error al iniciar sesión' });
   }
-  async function cargarAlumnos() {
-    try {
-        const response = await fetch('/api/alumnos');
-        const alumnos = await response.json();
+});
 
-        const tablaAlumnos = document.getElementById('tabla-alumnos'); // Asegúrate de que este elemento exista en tu HTML
+// Función para cargar alumnos (si es necesario en el frontend, se puede llamar desde allí)
+async function cargarAlumnos() {
+  try {
+    const response = await fetch('/api/alumnos');
+    const alumnos = await response.json();
 
-        alumnos.forEach(alumno => {
-            const row = tablaAlumnos.insertRow(); // Crea una nueva fila en la tabla
-            row.insertCell(0).innerText = alumno.nombre; // Agrega el nombre
-            row.insertCell(1).innerText = alumno.apellidos; // Agrega los apellidos
-            row.insertCell(2).innerText = alumno.correo; // Agrega el correo
-            // Puedes agregar más celdas según necesites
-        });
-    } catch (error) {
-        console.error('Error al cargar alumnos:', error);
-    }
+    const tablaAlumnos = document.getElementById('tabla-alumnos'); // Asegúrate de que este elemento exista en tu HTML
+
+    alumnos.forEach(alumno => {
+      const row = tablaAlumnos.insertRow(); // Crea una nueva fila en la tabla
+      row.insertCell(0).innerText = alumno.nombre; // Agrega el nombre
+      row.insertCell(1).innerText = alumno.apellidos; // Agrega los apellidos
+      row.insertCell(2).innerText = alumno.correo; // Agrega el correo
+      // Puedes agregar más celdas según necesites
+    });
+  } catch (error) {
+    console.error('Error al cargar alumnos:', error);
+  }
 }
 
-});
 // Función para agregar el administrador si no existe
 async function addAdmin() {
   const adminEmail = 'guimar@admin3.com';
