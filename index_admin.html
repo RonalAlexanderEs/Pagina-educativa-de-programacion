@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/bootstrap.min-admin.css">
   <link rel="stylesheet" href="css/custom-admin.css">
   <link rel="stylesheet" href="css/style-admin.css">
+  <link rel="stylesheet" href="css/nodal.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -252,47 +254,41 @@
     <thead>
       <tr>
         <th>Nombre del Estudiante</th>
-        <th>Descripción de la Solicitud</th>
+        <th>Área de Beca</th>
         <th>Documentos Adjuntos</th>
         <th>Estado</th>
         <th>Acciones</th>
       </tr>
     </thead>
     <tbody>
-      <!-- Ejemplo de fila -->
+      <!-- Esta sección será llenada dinámicamente con las solicitudes -->
       <tr>
         <td>Juan Pérez</td>
-        <td>Solicito beca por necesidad económica.</td>
-        <td><a href="documento1.pdf">Documento1.pdf</a></td>
+        <td>Programación</td>
         <td>
-          <select onchange="cambiarEstado(this)">
-            <option value="aprobado">Aprobado</option>
-            <option value="en_revision" selected>En revisión</option>
-            <option value="rechazado">Rechazado</option>
-          </select>
+          <a href="ruta/documento1.pdf" target="_blank">Carta Solicitud</a>,
+          <a href="ruta/documento2.pdf" target="_blank">Comprobante</a>
         </td>
+        <td>Aprobada</td>
         <td>
-          <button class="btn btn-delete" onclick="deleteSolicitud(this)"><i class="material-icons">delete</i></button>
+          <button class="info-button" onclick="mostrarInformacion(this)">Información</button>
         </td>
       </tr>
-      <tr>
-        <td>María López</td>
-        <td>Solicito beca para programa de verano.</td>
-        <td><a href="documento2.pdf">Documento2.pdf</a></td>
-        <td>
-          <select onchange="cambiarEstado(this)">
-            <option value="aprobado">Aprobado</option>
-            <option value="en_revision" selected>En revisión</option>
-            <option value="rechazado">Rechazado</option>
-          </select>
-        </td>
-        <td>
-          <button class="btn btn-delete" onclick="deleteSolicitud(this)"><i class="material-icons">delete</i></button>
-        </td>
-      </tr>
+      <!-- Puedes añadir más filas aquí -->
     </tbody>
   </table>
 </div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Detalles de la Solicitud</h2>
+    <div id="modal-details"></div>
+  </div>
+</div>
+
+<button onclick="descargarInformacionEstudiante(estudianteId)">Descargar Información del Estudiante</button>
+
 
 
 
@@ -345,6 +341,10 @@
   <script src="/js/ingresos.js"></script>
   <script src="/js/GestionPagos.js"></script>
   <script src="/js/dashboard.js"></script>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
 
 
   <script>

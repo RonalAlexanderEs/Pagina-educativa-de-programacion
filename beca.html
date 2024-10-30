@@ -11,7 +11,7 @@
 <div class="container">
     <header>Postula a una beca</header>
 
-    <form id="beca-form">
+    <form id="beca-form" enctype="multipart/form-data">
         <!-- PRIMER FORMULARIO -->
         <div class="form first">
             <div class="info personal">
@@ -19,27 +19,27 @@
                 <div class="fields">
                     <div class="input-field">
                         <label>Nombre</label>
-                        <input type="text" id="nombre" placeholder="Ingresar nombre completo" required>
+                        <input type="text" name="nombre" placeholder="Ingresar nombre completo" required>
                     </div>
                     <div class="input-field">
                         <label>DNI</label>
-                        <input type="text" id="dni" placeholder="Ingresar su DNI" required>
+                        <input type="text" name="dni" placeholder="Ingresar su DNI" required>
                     </div>
                     <div class="input-field">
                         <label>Fecha de nacimiento</label>
-                        <input type="date" id="fecha-nacimiento" required>
+                        <input type="date" name="fechaNacimiento" required>
                     </div>
                     <div class="input-field">
                         <label>Email</label>
-                        <input type="email" id="email" placeholder="Ingresar correo" required>
+                        <input type="email" name="email" placeholder="Ingresar correo" required>
                     </div>
                     <div class="input-field">
                         <label>Número de teléfono</label>
-                        <input type="tel" id="telefono" placeholder="Ingresar número telefónico" required>
+                        <input type="tel" name="telefono" placeholder="Ingresar número telefónico" required>
                     </div>
                     <div class="input-field">
                         <label>Sexo</label>
-                        <input type="text" id="sexo" placeholder="Ingresar sexo" required>
+                        <input type="text" name="sexo" placeholder="Ingresar sexo" required>
                     </div>
                 </div>
             </div>
@@ -49,27 +49,27 @@
                 <div class="fields">
                     <div class="input-field">
                         <label>País</label>
-                        <input type="text" id="pais" placeholder="Ingresar país" required>
+                        <input type="text" name="pais" placeholder="Ingresar país" required>
                     </div>
                     <div class="input-field">
                         <label>Departamento</label>
-                        <input type="text" id="departamento" placeholder="Ingresar departamento" required>
+                        <input type="text" name="departamento" placeholder="Ingresar departamento" required>
                     </div>
                     <div class="input-field">
                         <label>Distrito</label>
-                        <input type="text" id="distrito" placeholder="Ingresar distrito" required>
+                        <input type="text" name="distrito" placeholder="Ingresar distrito" required>
                     </div>
                     <div class="input-field">
                         <label>Dirección domiciliaria</label>
-                        <input type="text" id="direccion" placeholder="Ingresar dirección domiciliaria" required>
+                        <input type="text" name="direccion" placeholder="Ingresar dirección domiciliaria" required>
                     </div>
                     <div class="input-field">
                         <label>Código postal</label>
-                        <input type="text" id="codigo-postal" placeholder="Ingresar código postal" required>
+                        <input type="text" name="codigoPostal" placeholder="Ingresar código postal" required>
                     </div>
                     <div class="input-field">
                         <label>Referencia</label>
-                        <input type="text" id="referencia" placeholder="Ingresar referencia" required>
+                        <input type="text" name="referencia" placeholder="Ingresar referencia" required>
                     </div>
                 </div>
             </div>
@@ -82,11 +82,11 @@
                 <div class="fields">
                     <div class="input-field">
                         <label>Código de estudiante</label>
-                        <input type="text" id="codigo-estudiante" placeholder="Ingresar código de estudiante" required>
+                        <input type="text" name="codigoEstudiante" placeholder="Ingresar código de estudiante" required>
                     </div>
                     <div class="input-field">
                         <label>Nivel educativo</label>
-                        <select id="nivel-educativo" required>
+                        <select name="nivelEducativo" required>
                             <option value="" disabled selected>Seleccionar</option>
                             <option value="basico">Básico</option>
                             <option value="secundario">Secundario</option>
@@ -95,7 +95,7 @@
                     </div>
                     <div class="input-field">
                         <label>Área deseada</label>
-                        <select id="area-beca" required>
+                        <select name="areaBeca" required>
                             <option value="" disabled selected>Seleccionar</option>
                             <option value="data_science">Data Science</option>
                             <option value="ciberseguridad">Ciberseguridad</option>
@@ -107,7 +107,7 @@
                     </div>
                     <div class="input-field">
                         <label>Tipo de Beca</label>
-                        <select id="tipo-beca" required>
+                        <select name="tipoBeca" required>
                             <option value="" disabled selected>Seleccionar</option>
                             <option value="parcial">Beca parcial</option>
                             <option value="completa">Beca completa</option>
@@ -115,11 +115,11 @@
                     </div>
                     <div class="input-field">
                         <label>Subir carta de solicitud</label>
-                        <input type="file" id="carta-solicitud" accept=".jpg, .jpeg, .png, .pdf" required>
+                        <input type="file" name="cartaSolicitud" accept=".jpg, .jpeg, .png, .pdf" required>
                     </div>
                     <div class="input-field">
                         <label>Subir comprobante</label>
-                        <input type="file" id="comprobante" accept=".jpg, .jpeg, .png, .pdf, .mp4, .avi" required>
+                        <input type="file" name="comprobante" accept=".jpg, .jpeg, .png, .pdf, .mp4, .avi" required>
                     </div>
                 </div>
             </div>
