@@ -1,19 +1,20 @@
 const cursos = [
     { id: 1, nombre: "Curso de Inteligencia Artificial", url: "tema.html" },
-    { id: 2, nombre: "Introducción a Ciberseguridad", url: "curso-ciberseguridad.html" },
-    { id: 3, nombre: "Curso de Inglés Básico A1", url: "curso-ingles.html" },
-    { id: 4, nombre: "Ciberseguridad Avanzada", url: "ciberseguridad-avanzada.html" },
-    { id: 5, nombre: "Liderazgo y Management", url: "liderazgo.html" },
-    { id: 6, nombre: "English Academy", url: "english-academy.html" },
+    { id: 2, nombre: "Ruta - Base de datos", url: "BasesDatos.html" },
+    { id: 3, nombre: "Ruta - Big Data", url: "BigData.html" },
+    { id: 4, nombre: "Ruta - Ciberseguridad", url: "Ciberseguridad.html" },
+    { id: 5, nombre: "Ruta - Desarrollo de Aplicación", url: "DesaApp.html" },
+    { id: 6, nombre: "Ruta - Desarrollo Móviles", url: "DesarrolloMóviles.html" },
 
+    { id: 7, nombre: "Ruta - Desarrollo de Videojuegos", url: "DesaVideo.html" },
+    { id: 8, nombre: "Ruta - Inteligencia Artificial (IA)", url: "InteligenciaLeaning.html" },
+    { id: 9, nombre: "Ruta - Programación Web", url: "ProgramaciónWeb.html" },
+    { id: 10, nombre: "Ruta - Realidad Virtual(RV) y Aumentada(RA)", url: "RealidadA.html" },
+    { id: 11, nombre: "Ruta - Robótica", url: "Robótica.html" },
+    { id: 12, nombre: "Beca", url: "beca.html" },
+    { id: 13, nombre: "Planes", url: "planes.html" },
+    { id: 14, nombre: "Cursos", url: "explorar.html" },
 
-
-    { id: 7, nombre: "Ruta Data Science e Inteligencia Artificial", url: "data-science.html" },
-    { id: 8, nombre: "Ruta Ciberseguridad", url: "cybersecurity.html" },
-    { id: 9, nombre: "Ruta Ingles", url: "english.html" },
-    { id: 10, nombre: "Ruta Desarrollo Web", url: "web-dev.html" },
-    { id: 11, nombre: "Liderazgo y Management", url: "liderazgo.html" },
-    { id: 12, nombre: "English Academy", url: "english-academy.html" },
 ];
 
 const searchInput = document.querySelector('.search-input');

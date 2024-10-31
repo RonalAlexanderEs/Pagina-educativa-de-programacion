@@ -1,16 +1,14 @@
 const schools = [
-    { icon: '🧠', name: 'Data Science e Inteligencia Artificial', class: 'data-science' },
-    { icon: '🛡️', name: 'Ciberseguridad', class: 'cybersecurity' },
-    { icon: '👥', name: 'Liderazgo y Management', class: 'leadership' },
-    { icon: '🌐', name: 'English Academy', class: 'english' },
-    { icon: '💻', name: 'Desarrollo Web', class: 'web-dev' },
-    { icon: '📢', name: 'Marketing Digital', class: 'marketing' },
-    { icon: '✏️', name: 'Producto', class: 'product' },
-    { icon: '🎬', name: 'Contenido Audiovisual', class: 'audiovisual' },
-    { icon: '📊', name: 'Análisis de Datos', class: 'data-analysis' },
-    { icon: '🤖', name: 'Robótica', class: 'robotics' },
-    { icon: '📱', name: 'Desarrollo de Apps Móviles', class: 'mobile-dev' },
-    { icon: '🎨', name: 'Diseño UX/UI', class: 'ux-ui' }
+    { icon: '🧠', name: 'Programación Web', class: 'ProgramaciónWeb' },
+    { icon: '🛡️', name: 'Bases de Datos', class: 'BasesDatos' },
+    { icon: '👥', name: 'Desarrollo de Aplicaciones', class: 'DesaApp' },
+    { icon: '🌐', name: 'Inteligencia Artificial y Machine Learning', class: 'InteligenciaLearning' },
+    { icon: '💻', name: 'Ciberseguridad', class: 'Ciberseguridad' },
+    { icon: '📢', name: 'Desarrollo de Videojuegos', class: 'DesaVide' },
+    { icon: '✏️', name: 'Robótica y Automatización', class: 'Robótica' },
+    { icon: '🎬', name: 'Big Data y Análisis de Datos', class: 'BigData' },
+    { icon: '📊', name: 'Desarrollo de Aplicaciones Móviles', class: 'DesarrolloMóviles' },
+    { icon: '🤖', name: 'Realidad Aumentada y Realidad Virtual', class: 'RealidadA' },
 ];
 
 const despliegue = document.getElementById('despliegue'); // Cambiado para coincidir con el ID en HTML

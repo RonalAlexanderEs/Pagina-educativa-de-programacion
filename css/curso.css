@@ -245,6 +245,8 @@ body {
 
 
 /*CURSO*/
+
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -356,7 +358,7 @@ p {
 .course-duration {
     font-size: 15px;
     font-weight: 700;
-    color:var( --color-verde-oscuro);
+    color:var( --color-verde-planes);
 }
 
 h2 {
@@ -369,6 +371,10 @@ a {
     text-decoration: none;
     color: #fff;
 }
+
+
+
+
 
 /*PLANES*/
 .pricing-container {
@@ -392,7 +398,7 @@ a {
 }
 
 .pricing-card:hover{
-    border: 3px solid var( --color-verde-oscuro);
+    border: 3px solid var( --color-verde-planes);
 }
 
 @media  (max-width: 768px) {
@@ -431,7 +437,7 @@ a {
 }
 .plan-features li::before {
     content: "+";
-    color: var( --color-verde-oscuro);
+    color: var( --color-verde-planes);
     margin-right: 5px;
 }
 .plan-features li.unavailable::before {
@@ -451,7 +457,7 @@ a {
 }
 .subscribe-button {
     
-    background-color:var( --color-verde-oscuro);
+    background-color:var( --color-verde-planes);
     border: none;
     color: white;
     padding: 10px 100px;
@@ -498,3 +504,6 @@ a {
     margin-left: 40px;
     margin-right: 40PX ;
 }
+
+
+

@@ -6,7 +6,6 @@
     <title>Learning Platform</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/perfil-usu.css">
-
 </head>
 <body>
     <div class="sidebar">
@@ -22,30 +21,35 @@
                 <i class="fas fa-map"></i>
                 Rutas
             </a>
-        
             <a href="sesion.html" class="nav-item">
                 <i class="fas fa-exit"></i>
                 Cerrar Sesión
             </a>
-          
         </nav>
     </div>
 
     <header class="header">
-      
         <div class="user-section">
-            <span>0 pts</span>
+            <span id="user-points">0 pts</span>
             <div class="user-avatar"></div>
         </div>
     </header>
 
     <main class="main-content">
+        <div class="user-info">
+            <h2>Información del Usuario</h2>
+            <br><br>
+            <p><strong>Nombre:</strong> <span id="nombre-usuario">Cargando...</span></p>
+            <p><strong>Correo:</strong> <span id="correo-usuario">Cargando...</span></p>
+            <p><strong>Fecha de Nacimiento:</strong> <span id="fecha-nacimiento-usuario">Cargando...</span></p>
+        </div>
+
         <div class="schools">
             <h2>Descubre las escuelas</h2>
             <div class="schools-grid">
                 <div class="school-item">
                     <i class="fas fa-code"></i>
-                   <a href="web-dev.html"> <p>Desarrollo Web</p></a>
+                    <a href="web-dev.html"><p>Desarrollo Web</p></a>
                 </div>
                 <div class="school-item">
                     <i class="fas fa-brain"></i>
@@ -55,18 +59,63 @@
                     <i class="fas fa-briefcase"></i>
                     <a href="leadership.html"><p>Negocios</p></a>
                 </div>
-            
                 <div class="school-item">
                     <i class="fas fa-globe"></i>
-                   <a href="english.html"> <p>English</p></a>
+                    <a href="english.html"><p>English</p></a>
                 </div>
                 <div class="school-item">
                     <i class="fas fa-cogs"></i>
-                   <a href="data-science.html"><p>Software</p></a>
+                    <a href="data-science.html"><p>Software</p></a>
                 </div>
             </div>
             <a href="explorar.html" class="start-button">Comienza ahora →</a>
         </div>
     </main>
+<!-- Botón de Cerrar Sesión -->
+<nav>
+    <a href="index.html" class="nav-item">
+        <i class="fas fa-home"></i>
+        Inicio
+    </a>
+    <a href="/explorar.html" class="nav-item">
+        <i class="fas fa-map"></i>
+        Rutas
+    </a>
+    <button id="logout-btn" class="nav-item">
+        <i class="fas fa-sign-out-alt"></i>
+        Cerrar Sesión
+    </button>
+</nav>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const userData = JSON.parse(localStorage.getItem('user_data'));
+
+    if (userData) {
+        document.getElementById('nombre-usuario').innerText = userData.nombre;
+        document.getElementById('correo-usuario').innerText = userData.correo;
+        document.getElementById('fecha-nacimiento-usuario').innerText = userData.fecha_nacimiento;
+    } else {
+        alert('No se pudo cargar la información del usuario.');
+    }
+});
+
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const userData = JSON.parse(localStorage.getItem('user_data'));
+    
+        if (userData) {
+            document.getElementById('nombre-usuario').innerText = userData.nombre;
+            document.getElementById('correo-usuario').innerText = userData.correo;
+            document.getElementById('fecha-nacimiento-usuario').innerText = userData.fecha_nacimiento;
+        } else {
+            alert('No se pudo cargar la información del usuario.');
+        }
+    });
+    
+        </script>
+    <script src="/js/perfil-usu.js"></script>
+
 </body>
 </html>

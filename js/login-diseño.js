@@ -107,7 +107,6 @@ registerForm.addEventListener('submit', async (e) => {
     }
 });
 
-
 /*Login-Diseño*/
 const loginForm = document.querySelector('#loginForm');
 
@@ -140,10 +139,71 @@ loginForm.addEventListener('submit', async (e) => {
 
         // Aquí asumiendo que `data.user` tiene la información del usuario
         alert(`Bienvenido ${data.user.nombre}`); // Usa data.user.nombre
-        localStorage.setItem('login_success', JSON.stringify(data));
+        localStorage.setItem('user_data', JSON.stringify(data.user)); // Almacena datos del usuario
+        const edad = calcularEdad(data.user.fechaNacimiento); // Calcular la edad
+        localStorage.setItem('user_age', edad); // Almacena la edad
+
+        // Cambiar botón 'Acceder' a imagen de perfil
+        const loginButton = document.querySelector(".acceder-btn");
+        if (loginButton) {
+            loginButton.innerHTML = `<img src="/img/perfil.png" alt="Perfil" id="profile-icon" class="perfil-imagen" />`;
+
+            // Agregar evento para redirigir al perfil al hacer clic en la imagen de perfil
+            document.getElementById('profile-icon').addEventListener('click', () => {
+                window.location.href = '/perfil-usuario.html';
+            });
+        }
+
+        // Cambiar estilo según la edad
+        cambiarEstiloPorEdad(edad);
+
         window.location.href = data.redirect; // Redirige a la página indicada
     } catch (error) {
         console.error('Error al iniciar sesión:', error); // Muestra el error en la consola
         alert(error.message || 'Error al iniciar sesión');
     }
 });
+
+function cambiarEstiloPorEdad(edad) {
+    // Eliminar cualquier hoja de estilo anterior
+    const existingLink = document.querySelector('link[rel="stylesheet"]');
+    if (existingLink) {
+        document.head.removeChild(existingLink);
+    }
+
+    let link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.type = "text/css";
+
+    if (edad >= 5 && edad <= 10) {
+        link.href = "/css/estilos-5-a-10.css";
+    } else if (edad > 10 && edad <= 18) {
+        link.href = "/css/estilos-10-a-18.css";
+    } else if (edad > 18) {
+        link.href = "/css/estilos-mayor-a-18.css";
+    }
+
+    document.head.appendChild(link);
+    console.log('CSS cambiado a:', link.href);
+}
+
+
+// Función para calcular la edad
+function calcularEdad(fechaNacimiento) {
+    const hoy = new Date();
+    const nacimiento = new Date(fechaNacimiento);
+    let edad = hoy.getFullYear() - nacimiento.getFullYear();
+    const mes = hoy.getMonth() - nacimiento.getMonth();
+
+    if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
+        edad--;
+    }
+
+    return edad;
+}
+// Supón que esta línea se ejecuta justo después de iniciar sesión y obtener los datos del usuario
+const user_data = JSON.parse(localStorage.getItem('login_success')); // Cambia según cómo guardes la información
+const edadUsuario = calcularEdad(user_data.fecha_nacimiento);
+
+cambiarEstiloPorEdad(edadUsuario);
+

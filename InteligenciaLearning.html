@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carrera</title>
+    <link rel="stylesheet" href="/css/carrera.css">
+</head>
+
+<body>
+
+
+    <!--ENCABEZADO-->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="explorar.html">Cursos</a></li>
+
+                <li><a href="planes.html">Planes</a></li>
+
+                <li><a href="beca.html">Beca</a></li>
+                <li>
+                    <div class="dropdown">
+                        <span class="edad">Edad</span>
+                        <div class="dropdown-content">
+                            <a href="#"
+                                onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',], ['#ff3d3d', '#b92b2b', 'rgba(190, 50, 50, 0.856)', '#d03434'])">5-10
+                                años</a>
+                            <a href="#"
+                                onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',],['#00e5ff', '#025266', ' rgba(15, 121, 170, 0.856)', '#03c2db'])">10-18
+                                años
+                            </a>
+                            <a href="#"
+                                onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',], ['#00ff7f', '#026634', 'rgba(15, 170, 80, 0.856)', '#03db6f'])">19+
+                                años
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </nav>
+
+
+
+
+        <a href="sesion.html" class="btn"><button class="acceder-btn">Acceder</button></a>
+        <!--MENU ADAPTATIVO-->
+        <a onclick="openNav()" href="#" class="menu"><button class="acceder-btn">Menu</button></a>
+        <div class="overlay" id="mobile-menu">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="explorar.html">Cursos</a>
+                <a href="planes.html">Planes</a>
+
+                <a href="beca.html">Beca</a>
+                <div class="dropdown">
+                    <span class="edad">Edad</span>
+                    <div class="dropdown-content">
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',], ['#ff3d3d', '#b92b2b', 'rgba(190, 50, 50, 0.856)', '#d03434'])">5-10
+                            años</a>
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',],['#00e5ff', '#025266', ' rgba(15, 121, 170, 0.856)', '#03c2db'])">10-18
+                            años
+                        </a>
+                        <a href="#"
+                            onclick="changeMultipleColors(['--color-verde', '--color-verde-oscuro', '--color-verde-transparente', '--color-verde-planes',], ['#00ff7f', '#026634', 'rgba(15, 170, 80, 0.856)', '#03db6f'])">19+
+                            años
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!--CARRERA-->
+
+    <div class="container">
+
+
+        <div class="titulo">
+
+            <div class="info-curso">
+            <p class="info-ruta">Ruta</p>
+            <h1>Inteligencia Artificial y Machine Learning</h1>
+            <p class="titulo-info-cabeza">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ut inventore
+                similique expedita maxime eligendi vitae, doloribus quam reiciendis ducimus quibusdam obcaecati,
+                corporis, tempora repudiandae minima at! Incidunt, blanditiis explicabo.</p>
+            <a href="/planes.html"><button class="start-button">Empieza ahora</button></a>
+        </div>
+  
+                <img  class="img-zorro" src="/img/IA-porta.svg" alt="">
+    
+        </div>
+
+        <div class="nav-tabs">
+            <div class="nav-tab active" data-tab="intro">Fundamentos de Machine Learning</div>
+            <div class="nav-tab" data-tab="generativa">Redes Neuronales y Deep Learning</div>
+
+        </div>
+
+        <div class="content">
+            <div id="intro" class="section">
+                <div class="titulo-info">
+                    <h2>Fundamentos de Machine Learning</h2>
+
+                    <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci aspernatur cupiditate
+                        laborum, fuga numquam hic neque ab magni repudiandae labore facilis, exercitationem tempore
+                        minus, nihil repellat sapiente atque! Fuga, alias?</span>
+
+                </div>
+
+
+                <div class="conten-cur">
+
+                    <div class="course">
+                        <h3 class="titulo-ruta">Introducción a IA y Machine Learning para Niños con LEGO Mindstorms</h3>
+                        <p class="contenido-ruta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis enim id
+                            repellendus</p>
+                        <div class="course-info">
+                            <span>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div> 3 cursos
+                            </span>
+                            <span class="edad-tem">5 - 10 años</span>
+                        </div>
+                        <a href="curso.html"><button class="course-button">Conocer ruta</button></a>
+                    </div>
+
+
+                    <div class="course">
+                        <h3 class="titulo-ruta">Juegos de Aprendizaje Automático para Niños</h3>
+                        <p class="contenido-ruta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis enim id
+                            repellendus</p>
+                        <div class="course-info">
+                            <span>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div> 3 cursos
+                            </span>
+                            <span class="edad-tem">5 - 10 años</span>
+                        </div>
+                        <button class="course-button">Conocer ruta</button>
+                    </div>
+
+
+                    <div class="course">
+                        <h3 class="titulo-ruta">Fundamentos de Machine Learning con Python</h3>
+                        <p class="contenido-ruta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis enim id
+                            repellendus</p>
+                        <div class="course-info">
+                            <span>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div> 3 cursos
+                            </span>
+                            <span class="edad-tem">11 - 18 años</span>
+                        </div>
+                        <button class="course-button">Conocer ruta</button>
+                    </div>
+
+                    <div class="course">
+                        <h3 class="titulo-ruta">Machine Learning para Jóvenes</h3>
+                        <p class="contenido-ruta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis enim id
+                            repellendus</p>
+                        <div class="course-info">
+                            <span>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div> 3 cursos
+                            </span>
+                            <span class="edad-tem">11 - 18 años</span>
+                        </div>
+                        <button class="course-button">Conocer ruta</button>
+                    </div>
+
+                    <!-- Cursos mayores -->
+
+                    <div class="course">
+                        <h3 class="titulo-ruta">Machine Learning Avanzado</h3>
+                        <p class="contenido-ruta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis enim id
+                            repellendus</p>
+                        <div class="course-info">
+                            <span>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div> 3 cursos
+                            </span>
+                            <span class="edad-tem">19 - + años</span>
+                        </div>
+                        <button class="course-button">Conocer ruta</button>
+                    </div>
+
+                    <div class="course">
+                        <h3 class="titulo-ruta">Machine Learning con Python y TensorFlow</h3>
+                        <p class="contenido-ruta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis enim id
+                            repellendus</p>
+                        <div class="course-info">
+                            <span>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div> 3 cursos
+                            </span>
+                            <span class="edad-tem">19 - + años</span>
+                        </div>
+                        <button class="course-button">Conocer ruta</button>
+                    </div>
+            <!-- FIN DE CURSOS -->
+                </div>
+
+            </div>
+
+
+
+            <!--SEGUNDO TEMA--------------------------------------------------->
+            <div id="generativa" class="section">
+                <div class="titulo-info">
+                    <h2>Redes Neuronales y Deep Learning</h2>
+
+                    <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci aspernatur cupiditate
+                        laborum, fuga numquam hic neque ab magni repudiandae labore facilis, exercitationem tempore
+                        minus, nihil repellat sapiente atque! Fuga, alias?</span>
+
+                </div>
+
+
+                <div class="conten-cur">
+
+                    <div class="course">
+                        <h3 class="titulo-ruta">Robots Aprendiendo con Redes Neuronales</h3>
+                        <p class="contenido-ruta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis enim id
+                            repellendus</p>
+                        <div class="course-info">
+                            <span>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div> 3 cursos
+                            </span>
+                            <span class="edad-tem">5 - 10 años</span>
+                        </div>
+                        <a href="curso.html"><button class="course-button">Conocer ruta</button></a>
+                    </div>
+
+
+                    <div class="course">
+                        <h3 class="titulo-ruta">Construcción de Redes Neuronales Básicas con Juegos</h3>
+                        <p class="contenido-ruta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis enim id
+                            repellendus</p>
+                        <div class="course-info">
+                            <span>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div> 3 cursos
+                            </span>
+                            <span class="edad-tem">5 - 10 años</span>
+                        </div>
+                        <button class="course-button">Conocer ruta</button>
+                    </div>
+
+
+                    <div class="course">
+                        <h3 class="titulo-ruta">Deep Learning para Principiantes</h3>
+                        <p class="contenido-ruta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis enim id
+                            repellendus</p>
+                        <div class="course-info">
+                            <span>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div> 3 cursos
+                            </span>
+                            <span class="edad-tem">11 - 18 años</span>
+                        </div>
+                        <button class="course-button">Conocer ruta</button>
+                    </div>
+
+                    <div class="course">
+                        <h3 class="titulo-ruta">Redes Neuronales y Deep Learning con Python</h3>
+                        <p class="contenido-ruta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis enim id
+                            repellendus</p>
+                        <div class="course-info">
+                            <span>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div> 3 cursos
+                            </span>
+                            <span class="edad-tem">11 - 18 años</span>
+                        </div>
+                        <button class="course-button">Conocer ruta</button>
+                    </div>
+
+                    <!-- Cursos mayores -->
+
+                    <div class="course">
+                        <h3 class="titulo-ruta">Deep Learning Avanzado con TensorFlow</h3>
+                        <p class="contenido-ruta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis enim id
+                            repellendus</p>
+                        <div class="course-info">
+                            <span>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div> 3 cursos
+                            </span>
+                            <span class="edad-tem">19 - + años</span>
+                        </div>
+                        <button class="course-button">Conocer ruta</button>
+                    </div>
+
+                    <div class="course">
+                        <h3 class="titulo-ruta">Redes Neuronales Profundas y Deep Learning</h3>
+                        <p class="contenido-ruta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis enim id
+                            repellendus</p>
+                        <div class="course-info">
+                            <span>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div> 3 cursos
+                            </span>
+                            <span class="edad-tem">19 - + años</span>
+                        </div>
+                        <button class="course-button">Conocer ruta</button>
+                    </div>
+            <!-- FIN DE CURSOS -->
+                </div>
+
+            </div>
+
+
+           
+
+        </div>
+    </div>
+    </div>
+    <script src="/js/edad.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/carrera.js"></script>
+</body>
+
+</html>
